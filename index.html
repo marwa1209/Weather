@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <!-- ______________________________MAIN STYLE___________________________________________ -->
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <!-- ______________________________BOOTSTRAP STYLE___________________________________________ -->
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <!-- ______________________________GOOGLE FONTS___________________________________________ -->
+    <link rel="stylesheet" href="./assets/css/all.min.css">
+</head>
+
+<body>
+    <main class="vh-100 ">
+        <nav class="py-5 bg-navy">
+            <div class="container px-5">
+                <div class="row">
+                    <div class="col-md-6">
+                        <a href="./index.html" class="logo d-flex gap-3 ">
+                            <picture>
+                                <img class="d-block logo-img" src="./assets/images/logo@2x.png" alt="logo">
+                            </picture>
+                            <div class="logo-text text-white">
+                                <h1 class="mb-0  ">Weather</h1>
+                                <small class="text-grey">tagline goes here</small>
+                            </div>
+
+                        </a>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="nav-links d-flex gap-5">
+                            <a href="./index.html">Home</a>
+                            <a href="#">News</a>
+                            <a href="#">Live Canmeras</a>
+                            <a href="#">Photos</a>
+                            <a href="./Contact.html">Contact</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div id="home" class="py-5 bg-navy">
+            <div class="container">
+                <div class="mb-3 d-flex position-relative ">
+                    <input type="search" class="form-control rounded-5 py-3" id="search" placeholder="Find Yout Location">
+                    <input class="position-absolute end-0 top-0 bottom-0 m-1 w-10 rounded-5  border-0" type="button"
+                        value="find" id="submit">
+                </div>
+                <div class="row py-5 h-100">
+                    <div class="col-md-4 p-0 ">
+                        <div class="today h-100">
+                        <div class="header d-flex justify-content-between bg-head text-white  p-2 text-grey">
+                            <p class="text-grey  my-auto" id="dayName"></p>
+                            <p class="text-grey my-auto" id="date"></p>
+                        </div>
+                        <div class="body h-85 bg-body-navy p-4">
+                            <p class="text-grey"id="city"></p>
+                            <div class="d-flex gap-4 align-items-center">
+                            <div class=" text-white fs-90 fw-bolder">
+                              <span id="degree"></span><sup>o</sup>C
+                                
+                            </div>
+                            <img width="90px"  id="wether-statues-img" src="" alt="">
+                            </div>
+                            <p class="text-info" id="tody-statues"></p>
+                            <div class="text-grey d-flex align-items-center gap-3">
+                                <p ><img src="./assets/images/icon-umberella.png" class="me-1"><span class="ps-2" id="wind"></span></p>
+                                <p ><img src="./assets/images/icon-wind.png" class="me-1"><span class="ps-2" id="fast"></span></p>
+                                <p ><img src="./assets/images/icon-compass.png" class="me-1"><span class="ps-2" id="direction"></span></p>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 p-0 ">
+                        <div class="tomorrow h-100">
+                        <div class="header  bg-head-2 text-white  p-2 text-grey">
+                            <p class="text-grey m-auto text-center"id="tomorrow-day"></p>
+
+                        </div>
+                        <div class="body  h-85 bg-light-navy p-4 text-center ">
+                            <img id="img-tom" src="" alt="">
+                                <div class="m-auto text-white fs-3">
+                                    <p id="degree-tom" class="fs-5 fw-bold text-white"></p>
+                                    <small id="degree-tom-small" class="fs-6 text-grey"></small>
+                                </div>
+                            <p class="text-info" id="statues-tom"></p>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 p-0 ">
+                        <div class="tomorrow h-100">
+                            <div class="header  bg-head-2 text-white  p-2 text-grey">
+                                <p class="text-grey m-auto text-center" id="tomorrow-day"></p>
+                    
+                            </div>
+                            <div class="body  h-85 bg-light-navy p-4 text-center ">
+                                <img id="img-tom" src="" alt="">
+                                <div class="m-auto text-white fs-3">
+                                    <p id="degree-tom" class="fs-5 fw-bold text-white"></p>
+                                    <small id="degree-tom-small" class="fs-6 text-grey"></small>
+                                </div>
+                                <p class="text-info" id="statues-tom"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+    </main>
+    <footer class="bg-body-navy ">
+        <div class="container PX-5">
+            <div class="row py-5">
+                <div class="col-md-8 ">
+                    <div class="mb-3 d-flex position-relative ">
+                        <input type="text" class="form-control rounded-5 py-3" id="search"
+                            placeholder="enter your emil to subscripe">
+                        <input class="position-absolute end-0 top-0 bottom-0 m-1 w-10 rounded-5  border-0" type="button"
+                            value="Subscripe" id="submit">
+                    </div>
+                </div>
+                <div class="col-md-3 ">
+                    <div class="social-links">
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-google-plus"></i></a>
+                        <a href="#"><i class="fa-brands fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <p class="text-white">Copyright 2014 Company name. Designed by Themezy. All rights reserved</p>
+            </div>
+        </div>
+    </footer>
+    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
