@@ -14,9 +14,12 @@ let TommoreDegree = document.querySelectorAll("#degree-tom");
 let TommoreDegreeSmall = document.querySelectorAll("#degree-tom-small");
 let tomorrowimg = document.querySelectorAll("#img-tom");
 let statuesTommorrow = document.querySelectorAll("#statues-tom");
-console.log(statuesTommorrow);
-async function fetchdata(){
-    const response = await fetch("https://api.weatherapi.com/v1/forecast.json?key=d82b2c0afe2d4c63a42165440241801&q=Cairo&days=3");
+//search Input
+let searchInput = document.getElementById("search");
+
+//fetch data
+async function fetchdata(city){
+    const response = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=d82b2c0afe2d4c63a42165440241801&q=${city}&days=3`);
    let  data = await response.json();
      return data;
 }
@@ -72,9 +75,22 @@ statuesTommorrow[index].innerHTML = forcastData[index + 1].day.condition.text;
   }
 
 }
-async function StartApp(){
-    let weatherData = await fetchdata();
-    displayTodayData(weatherData);
-    displaytommorrowData(weatherData);
+async function StartApp(city="cairo") {
+  let weatherData = await fetchdata(city);
+  if (!weatherData.error) {
+      displayTodayData(weatherData);
+      displaytommorrowData(weatherData);
+  }
+
 }
-StartApp();
+
+ StartApp();
+
+searchInput.addEventListener("input",function(){
+  if (searchInput.value!="") {
+    StartApp(searchInput.value);
+  } else {
+    StartApp();
+  }
+
+})
